@@ -1,0 +1,80 @@
+@keyframes fly-x {
+    0% {
+        left: -10%
+    }
+
+    100% {
+        left: 110%
+    }
+}
+
+@-webkit-keyframes fly-x {
+    0% {
+        left: -10%
+    }
+
+    100% {
+        left: 110%
+    }
+}
+
+
+
+.fly-x {
+    position: fixed;
+    left: 0;
+    -webkit-animation-name: fly-x;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-play-state: running;
+    animation-name: fly-x;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+
+    &.type-0 {
+        top: 1%;
+    }
+
+    &.type-1 {
+        top: 10%;
+    }
+
+    &.type-2 {
+        top: 20%;
+    }
+
+    &.type-3 {
+        top: 30%;
+    }
+
+    &.type-4 {
+        top: 40%;
+    }
+
+    &.type-5 {
+        top: 50%;
+    }
+
+    &.type-6 {
+        top: 60%;
+    }
+
+    &.type-7 {
+        top: 70%;
+    }
+
+    &.type-8 {
+        top: 80%;
+    }
+
+    &.type-9 {
+        top: 90%;
+    }
+}
+
+.fly-x-reverse {
+    @extend .fly-x;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}

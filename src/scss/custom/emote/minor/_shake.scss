@@ -1,0 +1,35 @@
+@import './base';
+
+@-webkit-keyframes shake {
+
+    0%,
+    100% {
+        -webkit-transform: rotate(-15deg);
+        transform: rotate(-15deg);
+    }
+
+    50% {
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        -webkit-transform: rotate(-15deg);
+        transform: rotate(-15deg);
+    }
+
+    50% {
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+}
+
+.shake {
+    @extend .minor-base;
+    -webkit-animation-name: shake;
+    animation-name: shake;
+}

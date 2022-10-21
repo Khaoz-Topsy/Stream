@@ -1,0 +1,33 @@
+.image.fit.emote {
+    max-height: 180px;
+    display: inline-block;
+
+    img {
+        margin: 1.25em auto;
+        max-width: 50%;
+    }
+}
+
+.tiny-img,
+img.tiny-img {
+    max-width: 25px;
+    max-height: 25px;
+
+    vertical-align: middle;
+}
+
+.sm-img,
+img.sm-img {
+    max-width: 40px;
+    max-height: 40px;
+
+    vertical-align: middle;
+}
+
+.xs-img,
+img.xs-img {
+    max-width: 30px;
+    max-height: 30px;
+
+    vertical-align: middle;
+}

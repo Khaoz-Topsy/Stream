@@ -1,0 +1,66 @@
+@import './base';
+
+@-webkit-keyframes sway-x {
+
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    50% {
+        -webkit-transform: translateX(80px);
+        transform: translateX(80px);
+    }
+}
+
+@keyframes sway-x {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(80px);
+    }
+}
+
+.sway-x {
+    @extend .minor-base;
+    -webkit-animation-name: sway-x;
+    animation-name: sway-x;
+}
+
+
+@-webkit-keyframes sway-y {
+
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    50% {
+        -webkit-transform: translateY(80px);
+        transform: translateY(80px);
+    }
+}
+
+@keyframes sway-y {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(80px);
+    }
+}
+
+.sway-y {
+    @extend .minor-base;
+    -webkit-animation-name: sway-y;
+    animation-name: sway-y;
+}

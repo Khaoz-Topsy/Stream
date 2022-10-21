@@ -1,0 +1,74 @@
+@keyframes snowflakes-fall {
+    0% {
+        top: -10%
+    }
+
+    100% {
+        top: 110%
+    }
+}
+
+@-webkit-keyframes snowflakes-fall {
+    0% {
+        top: -10%
+    }
+
+    100% {
+        top: 110%
+    }
+}
+
+
+
+.snowflake {
+    position: fixed;
+    top: 0;
+    -webkit-animation-name: snowflakes-fall;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-play-state: running;
+    animation-name: snowflakes-fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+
+    &.type-0 {
+        left: 1%;
+    }
+
+    &.type-1 {
+        left: 10%;
+    }
+
+    &.type-2 {
+        left: 20%;
+    }
+
+    &.type-3 {
+        left: 30%;
+    }
+
+    &.type-4 {
+        left: 40%;
+    }
+
+    &.type-5 {
+        left: 50%;
+    }
+
+    &.type-6 {
+        left: 60%;
+    }
+
+    &.type-7 {
+        left: 70%;
+    }
+
+    &.type-8 {
+        left: 80%;
+    }
+
+    &.type-9 {
+        left: 90%;
+    }
+}

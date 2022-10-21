@@ -1,0 +1,33 @@
+@import './base';
+
+@-webkit-keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.25;
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.25;
+    }
+}
+
+.pulse {
+    @extend .minor-base;
+    -webkit-animation-name: pulse;
+    -webkit-animation-timing-function: linear;
+    animation-name: pulse;
+    animation-timing-function: linear;
+}

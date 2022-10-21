@@ -1,0 +1,13 @@
+.social-button {
+    margin: 0 auto !important;
+    text-align: center !important;
+
+
+    @media screen and (min-width: 1200px) {
+        max-width: 50%;
+    }
+
+    div>div {
+        text-align: center !important;
+    }
+}

@@ -1,0 +1,136 @@
+@-webkit-keyframes moveX {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: calc(100vw - 128px);
+    }
+}
+
+@keyframes moveX {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: calc(100vw - 128px);
+    }
+}
+
+@-webkit-keyframes moveY {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: calc(100vh - 128px);
+    }
+}
+
+@keyframes moveY {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: calc(100vh - 128px);
+    }
+}
+
+
+
+.dvd {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    -webkit-animation-name: moveX, moveY;
+    -webkit-animation-timing-function: linear, linear;
+    -webkit-animation-iteration-count: infinite, infinite;
+    -webkit-animation-direction: alternate, alternate;
+    -webkit-animation-play-state: running, running;
+
+    animation-name: moveX, moveY;
+    animation-timing-function: linear, linear;
+    animation-iteration-count: infinite, infinite;
+    animation-direction: alternate, alternate;
+    animation-play-state: running, running;
+
+    &.type-0 {
+        -webkit-animation-duration: 10s, 5s !important;
+        animation-duration: 10s, 5s !important;
+    }
+
+    &.type-1 {
+        -webkit-animation-duration: 10s, 5s !important;
+        animation-duration: 10s, 5s !important;
+    }
+
+    &.type-2 {
+        -webkit-animation-duration: 5s, 15s !important;
+        animation-duration: 5s, 15s !important;
+    }
+
+    &.type-3 {
+        -webkit-animation-duration: 5s, 15s !important;
+        animation-duration: 5s, 15s !important;
+    }
+
+    &.type-4 {
+        -webkit-animation-duration: 20s, 5s !important;
+        animation-duration: 20s, 5s !important;
+    }
+
+    &.type-5 {
+        -webkit-animation-duration: 20s, 5s !important;
+        animation-duration: 20s, 5s !important;
+    }
+
+    &.type-6 {
+        -webkit-animation-duration: 5s, 20s !important;
+        animation-duration: 5s, 20s !important;
+    }
+
+    &.type-7 {
+        -webkit-animation-duration: 5s, 20s !important;
+        animation-duration: 5s, 20s !important;
+    }
+
+    &.type-8 {
+        -webkit-animation-duration: 25s, 20s !important;
+        animation-duration: 25s, 20s !important;
+    }
+
+    &.type-9 {
+        -webkit-animation-duration: 25s, 20s !important;
+        animation-duration: 25s, 20s !important;
+    }
+}
+
+@-webkit-keyframes moveX-reverse {
+    from {
+        left: calc(100vw - 128px);
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+@keyframes moveX-reverse {
+    from {
+        left: calc(100vw - 128px);
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+.dvd-reverse {
+    @extend .dvd;
+
+    -webkit-animation-name: moveX-reverse, moveY;
+    animation-name: moveX-reverse, moveY;
+}

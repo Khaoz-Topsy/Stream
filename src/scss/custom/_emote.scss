@@ -1,0 +1,187 @@
+// Major animations
+@import "./emote/major/snowflake";
+@import "./emote/major/fly";
+@import "./emote/major/dvd";
+
+// Minor animations
+@import "./emote/minor/sway";
+@import "./emote/minor/shake";
+@import "./emote/minor/spin";
+@import "./emote/minor/pulse";
+
+$emote-durations: 15s;
+
+@keyframes emote-opacity {
+    0% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes emote-opacity {
+    0% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.dashboard-emote {
+    -webkit-animation-name: emote-opacity;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-duration: #{$emote-durations};
+    animation-name: emote-opacity;
+    animation-iteration-count: 1;
+    animation-duration: #{$emote-durations};
+    opacity: 0;
+}
+
+img.dashboard-emote {
+    max-width: 128px;
+    max-height: 128px;
+}
+
+$animTimes: 1, 2, 3, 4, 10, 20, 30;
+
+@each $animTime in $animTimes {
+    .anim-sec-#{$animTime} {
+        -webkit-animation-duration: #{$animTime}s;
+        animation-duration: #{$animTime}s;
+    }
+}
+
+.video.col {
+    transition: all 1s ease-in-out;
+
+    &.active {
+        background-color: #146abb;
+    }
+}
+
+.group-selection {
+    width: 100%;
+    padding-bottom: 2em;
+}
+
+@media screen and (max-width: 920px) {
+    #login-top-right {
+        display: none;
+    }
+}
+
+.MuiButtonGroup-root.lg {
+    button {
+        min-width: 200px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        button {
+            min-width: 230px;
+        }
+    }
+
+    @media screen and (max-width: 920px) {
+        display: none;
+    }
+}
+
+.MuiButtonGroup-root.sm {
+    button {
+        max-width: 100px;
+        height: 4em;
+    }
+
+    img {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    @media screen and (min-width: 920px) {
+        display: none;
+    }
+
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
+}
+
+.MuiButtonGroup-root.xs {
+    button {
+        max-width: 75px;
+        height: 4em;
+    }
+
+    @media screen and (min-width: 500px) {
+        display: none;
+    }
+}
+
+.wrapper.style2 button {
+    background-color: transparent;
+    color: white !important;
+    text-transform: none;
+    outline: none;
+
+    &.MuiButtonGroup-grouped {
+        font: inherit;
+    }
+
+    &.MuiButton-outlinedPrimary {
+        border-color: #146abb;
+
+        &:hover,
+        &.active {
+            background-color: #0c5497;
+        }
+    }
+
+    .MuiButton-label {
+        padding: 1.5em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .emote-flex.flex.flex-4 .col,
+    .emote-flex.flex.flex-5 .col {
+        width: 22%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .emote-flex.flex.flex-3 .col,
+    .emote-flex.flex.flex-4 .col,
+    .emote-flex.flex.flex-5 .col {
+        width: 31%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .emote-flex.flex.flex-2 .col,
+    .emote-flex.flex.flex-3 .col,
+    .emote-flex.flex.flex-4 .col,
+    .emote-flex.flex.flex-5 .col {
+        width: 48%;
+    }
+
+    .video .caption {
+        padding: 0.5em;
+        max-height: 100px;
+        max-lines: 2;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
