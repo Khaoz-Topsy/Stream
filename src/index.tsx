@@ -4,7 +4,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
 import { ToastContainer } from 'react-toastify';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 import { DependencyInjectionProvider } from './integration/dependencyInjection';
 
@@ -51,10 +51,10 @@ getJSON('/assets/config.json', (status: boolean, response: string) => {
     <DependencyInjectionProvider>
       <React.StrictMode>
         <Provider store={store}>
-          <BrowserRouter>
+          <HashRouter>
             <App />
             <ToastContainer newestOnTop={false} />
-          </BrowserRouter>
+          </HashRouter>
         </Provider>
       </React.StrictMode>
     </DependencyInjectionProvider>
